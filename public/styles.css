@@ -1,0 +1,25 @@
+.content {
+  display: grid;
+  grid-template-columns: .25fr 56vw 1fr .25fr;
+  grid-template-areas:
+    ". desc reservation ."
+    ". reviews reservation .";
+  justify-self: center;
+  justify-items: left;
+}
+
+#root {
+  grid-area: desc;
+  z-index: -1;
+  margin-left: 30px;
+}
+
+#reservation {
+  grid-area: reservation;
+  z-index: -1;
+}
+
+#app {
+  grid-area: reviews;
+  z-index: -1;
+}

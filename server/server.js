@@ -8,12 +8,12 @@ const port = process.env.SERVER_PORT;
 const app = express();
 
 // Middleware
-app.use(createProxyMiddleware(`http://${host}:9800/api/photos`, {
-  changeOrigin: true,
-  router: {
-    'http://localhost:9800': 'http://localhost:9000'
-  }
-}));
+app.use(createProxyMiddleware(`http://${host}:9800/api/photos`, { changeOrigin: true }));
+app.use(createProxyMiddleware(`http://${host}:9006/api/description`, { changeOrigin: true }));
+app.use(createProxyMiddleware(`http://${host}:9006/api/place`, { changeOrigin: true }));
+app.use(createProxyMiddleware(`http://${host}:9802/api/room`, { changeOrigin: true }));
+app.use(createProxyMiddleware(`http://${host}:9803/api/ratings`, { changeOrigin: true }));
+app.use(createProxyMiddleware(`http://${host}:9803/api/reviews`, { changeOrigin: true }));
 app.use(express.static('public'));
 app.use(express.urlencoded());
 
@@ -23,11 +23,4 @@ app.listen(process.env.SERVER_PORT, (err) => {
   } else {
     console.log(`Server now hosted on http://${host}:${port}`);
   }
-});
-
-
-// HTTP Handlers
-app.get('/api/photos/:id', (req, res, next) => {
-  res.redirect(`http://${host}:9800/?${req.params.id}`);
-  next();
 });
