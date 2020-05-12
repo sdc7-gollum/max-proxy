@@ -30,8 +30,6 @@
 From within the root directory:
 
 ```sh
-npm init
-npm install --save express dotenv
-npm install --save-dev nodemon eslint eslint-config-airbnb
+npm install
 ```
 
