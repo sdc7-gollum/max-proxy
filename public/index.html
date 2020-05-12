@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Project Overnight</title>
+    <link rel="stylesheet" href="http://localhost:9800/styles.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      ProjectOvernight
+    </div>
+    <div id="photoBanner"></div>
+    <script src="http://localhost:9800/photoBannerBundle.js"></script>
+   <script>
+      window.onload = () => {
+        ReactDOM.render(
+          React.createElement(PhotoBanner),
+          document.getElementById('photoBanner')
+        );
+      }
+    </script>
+  </body>
+</html>

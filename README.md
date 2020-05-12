@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Proxy server accessing Project Overnight services
 
 ## Related Projects
 
@@ -21,10 +21,7 @@
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
+- Express
 
 ## Development
 
@@ -33,7 +30,8 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
-npm install
+npm init
+npm install --save express dotenv
+npm install --save-dev nodemon eslint eslint-config-airbnb
 ```
 
