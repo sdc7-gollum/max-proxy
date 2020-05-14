@@ -1,6 +1,6 @@
 .content {
   display: grid;
-  grid-template-columns: .25fr 56vw 1fr .25fr;
+  grid-template-columns: .25fr 50vw 1fr .25fr;
   grid-template-areas:
     ". desc reservation ."
     ". reviews reservation .";
@@ -11,7 +11,6 @@
 #root {
   grid-area: desc;
   z-index: -1;
-  margin-left: 30px;
 }
 
 #reservation {
