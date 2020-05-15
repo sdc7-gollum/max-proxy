@@ -1,24 +1,38 @@
+.header {
+  padding: 28px;
+  color: rgb(247, 57, 82);
+  vertical-align: bottom;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .content {
   display: grid;
   grid-template-columns: .25fr 50vw 1fr .25fr;
   grid-template-areas:
+    "photo photo photo photo"
     ". desc reservation ."
     ". reviews reservation .";
-  justify-self: center;
   justify-items: left;
 }
 
-#root {
-  grid-area: desc;
-  z-index: -1;
+#photoBanner {
+  z-index: 3;
+  grid-area: photo;
 }
 
 #reservation {
   grid-area: reservation;
-  z-index: -1;
+  position: sticky;
+}
+
+#root {
+  z-index: 0;
+  grid-area: desc;
+  margin-left: -1.4em;
 }
 
 #app {
   grid-area: reviews;
-  z-index: -1;
+  margin-top: 45em;
 }
