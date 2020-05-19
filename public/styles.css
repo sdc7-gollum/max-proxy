@@ -8,31 +8,31 @@
 
 .content {
   display: grid;
-  grid-template-columns: .25fr 50vw 1fr .25fr;
+  grid-template-columns: .5fr 2fr 2fr .5fr;
   grid-template-areas:
     "photo photo photo photo"
     ". desc reservation ."
     ". reviews reservation .";
+  justify-self: center;
   justify-items: left;
 }
 
 #photoBanner {
   z-index: 3;
   grid-area: photo;
+  bottom: 0;
 }
 
 #reservation {
   grid-area: reservation;
-  position: sticky;
 }
 
 #root {
   z-index: 0;
   grid-area: desc;
-  margin-left: -1.4em;
+  margin-left: -1.5em;
 }
 
-#app {
+#reviews {
   grid-area: reviews;
-  margin-top: 45em;
 }
